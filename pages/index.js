@@ -31,6 +31,7 @@ export default function Home() {
       <Head>
         <title>Cookie Parser</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#005d8f" />
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
@@ -43,15 +44,16 @@ export default function Home() {
           and we'll tell you what cookies are present.
         </p>
         <TextareaAutosize
-          className="w-full border shadow-md border-gray-100 mt-8 py-4 px-8"
+          className="w-full border shadow-md border-gray-100 my-8 py-4 px-8 rounded"
           name="cookieString"
           onChange={(event) => setCookieString(event.target.value)}
           placeholder="Add the result from document.cookie from any site"
           minRows="10"
           value={cookieString}
         />
+
         {cookieArray.length ? (
-          <div className="border w-full max-w-4xl my-8 bg-gray-50 py-4 px-8">
+          <div className="border w-full max-w-4xl rounded my-8 bg-gray-50 py-4 px-8">
             {cookieArray.map((cookie) => {
               return (
                 <div
@@ -68,7 +70,7 @@ export default function Home() {
           </div>
         ) : (
           <div
-            className="border w-full max-w-4xl my-8 bg-gray-50 py-4 px-8 flex items-center justify-center text-gray-400 font-light italic"
+            className="border w-full max-w-4xl rounded my-8 bg-gray-50 py-4 px-8 flex items-center justify-center text-gray-400 font-light italic"
             style={{ minHeight: "300px" }}
           >
             Enter your cookie string above
@@ -76,12 +78,12 @@ export default function Home() {
         )}
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24">
+      <footer className="flex items-center justify-center w-full h-24 text-gray-700 font-light">
         <a
-          className="flex items-center justify-center"
+          className="flex items-center justify-center space-x-2 w-full"
           href="https://bootpackdigital.com/"
         >
-          Powered by{" "}
+          <span>Powered by</span>
           <img
             src="/bootpack-horizontal.svg"
             alt="Bootpack Digital"
