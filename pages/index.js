@@ -12,6 +12,13 @@ export default function Home() {
       return;
     }
 
+    if (
+      cookieString.substring(0, 1) === '"' &&
+      cookieString.substring(-1, 1) === '"'
+    ) {
+      setCookieString(cookieString.substring(1, cookieString.length - 1));
+    }
+
     setCookieArray(
       cookieString.split("; ").reduce((accumulator, current) => {
         let [name, value] = current.split("=");
