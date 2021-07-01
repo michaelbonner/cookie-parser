@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         ) : (
           <div
-            className="border w-full max-w-4xl my-8 bg-gray-50 py-4 px-8"
+            className="border w-full max-w-4xl my-8 bg-gray-50 py-4 px-8 flex items-center justify-center text-gray-400 font-light italic"
             style={{ minHeight: "300px" }}
           >
             Enter your cookie string above
