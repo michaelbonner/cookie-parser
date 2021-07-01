@@ -60,8 +60,15 @@ export default function Home() {
                   className="py-2 grid grid-cols-2 gap-x-4 text-lg"
                   key={cookie.name}
                 >
-                  <dt className="text-xl text-right font-light">
-                    {cookie.name}
+                  <dt className="text-right font-light">
+                    <a
+                      className="underline text-blue-500"
+                      href={`https://cookiedatabase.org/?s=${cookie.name}&lang=en`}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {cookie.name}
+                    </a>
                   </dt>
                   <dd className="text-left font-medium">{cookie.value}</dd>
                 </div>
