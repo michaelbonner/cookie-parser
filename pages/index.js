@@ -52,7 +52,7 @@ export default function Home() {
         <h1 className="text-6xl font-bold mt-12">Cookie Parser</h1>
         <p className="mt-8 max-w-xl">
           Just drop in what you got from{" "}
-          <code className="bg-blue-100 py-1 px-2 rounded-md">
+          <code className="bg-blue-50 py-1 px-2 rounded-md">
             document.cookie
           </code>{" "}
           and we'll tell you what cookies are present. We never store any of
