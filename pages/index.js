@@ -50,12 +50,13 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-8 sm:px-20 text-center">
         <h1 className="text-6xl font-bold mt-12">Cookie Parser</h1>
-        <p className="mt-8">
+        <p className="mt-8 max-w-xl">
           Just drop in what you got from{" "}
           <code className="bg-blue-100 py-1 px-2 rounded-md">
             document.cookie
           </code>{" "}
-          and we'll tell you what cookies are present.
+          and we'll tell you what cookies are present. We never store any of
+          this data (go ahead and check the network tab in the dev tools).
         </p>
 
         <div className="sm:flex sm:items-stretch sm:justify-between w-full border border-gray-200 mt-16 rounded-lg">
