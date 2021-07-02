@@ -12,13 +12,6 @@ export default function Home() {
       return;
     }
 
-    if (
-      cookieString.substring(0, 1) === '"' &&
-      cookieString.substring(-1, 1) === '"'
-    ) {
-      setCookieString(cookieString.substring(1, cookieString.length - 1));
-    }
-
     setCookieArray(
       cookieString.split("; ").reduce((accumulator, current) => {
         let [name, value] = current.split("=");
@@ -32,6 +25,20 @@ export default function Home() {
       }, [])
     );
   }, [cookieString]);
+
+  const cookieStringSetter = (event) => {
+    if (
+      event.target.value.substring(0, 1) === '"' &&
+      event.target.value.substring(-1, 1) === '"'
+    ) {
+      setCookieString(
+        event.target.value.substring(1, event.target.value.length - 1)
+      );
+      return;
+    }
+
+    setCookieString(event.target.value);
+  };
 
   return (
     <div className="min-h-screen py-2">
@@ -53,7 +60,7 @@ export default function Home() {
         <TextareaAutosize
           className="w-full border shadow-md border-gray-100 my-8 py-4 px-8 rounded"
           name="cookieString"
-          onChange={(event) => setCookieString(event.target.value)}
+          onChange={(event) => cookieStringSetter(event)}
           placeholder="Add the result from document.cookie from any site"
           minRows="10"
           value={cookieString}
@@ -61,23 +68,25 @@ export default function Home() {
 
         {cookieArray.length ? (
           <div className="border w-full max-w-4xl rounded my-8 bg-gray-50 py-4 px-8">
-            {cookieArray.map((cookie) => {
+            {cookieArray.map((cookie, index) => {
               return (
                 <div
                   className="py-2 grid grid-cols-2 gap-x-4 text-lg"
-                  key={cookie.name}
+                  key={index}
                 >
-                  <dt className="text-right font-light">
+                  <dt className="text-right font-light break-all">
                     <a
                       className="underline text-blue-500"
-                      href={`https://cookiedatabase.org/?s=${cookie.name}&lang=en`}
+                      href={`https://cookiedatabase.org/?s=${cookie.name}`}
                       rel="noreferrer"
                       target="_blank"
                     >
                       {cookie.name}
                     </a>
                   </dt>
-                  <dd className="text-left font-medium">{cookie.value}</dd>
+                  <dd className="text-left font-medium break-all">
+                    {cookie.value}
+                  </dd>
                 </div>
               );
             })}
