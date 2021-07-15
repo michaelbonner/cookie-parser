@@ -1,6 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import TextareaAutosize from "react-textarea-autosize";
 
 export default function Home() {
   const [cookieString, setCookieString] = useState("");
@@ -55,8 +55,8 @@ export default function Home() {
           <code className="bg-blue-50 py-1 px-2 rounded-md">
             document.cookie
           </code>{" "}
-          and we'll tell you what cookies are present. We never store any of
-          this data (go ahead and check the network tab in the dev tools).
+          and we&apos;ll tell you what cookies are present. We never store any
+          of this data (go ahead and check the network tab in the dev tools).
         </p>
 
         <div className="sm:flex sm:items-stretch sm:justify-between w-full border border-gray-200 mt-16 rounded-lg">
@@ -115,10 +115,12 @@ export default function Home() {
           href="https://bootpackdigital.com/"
         >
           <span>Powered by</span>
-          <img
+          <Image
             src="/bootpack-horizontal.svg"
             alt="Bootpack Digital"
             className="h-16 ml-2"
+            width="300"
+            height="150"
           />
         </a>
       </footer>
