@@ -140,7 +140,7 @@ export default function Home() {
           prefer, include the cookie string in the URL as a query parameter. (
           <a
             className="text-blue-500 underline"
-            href={`https://cookie-parser.michaelbonner.dev/?cookie="bootpack=awesome;you=also awesome"`}
+            href={`https://cookie-parser.michaelbonner.dev/?cookie="bootpack=awesome; you=also awesome"`}
             rel="noreferrer"
             target="_blank"
           >
