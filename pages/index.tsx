@@ -49,6 +49,23 @@ export default function Home() {
     );
   }, [cookieString]);
 
+  useEffect(() => {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+
+    if (params.cookie) {
+      if (
+        params.cookie.substring(0, 1) === '"' &&
+        params.cookie.substring(-1, 1) === '"'
+      ) {
+        setCookieString(params.cookie.substring(1, params.cookie.length - 1));
+        return;
+      }
+
+      setCookieString(params.cookie);
+    }
+  }, []);
+
   const cookieStringSetter = (event) => {
     if (
       event.target.value.substring(0, 1) === '"' &&
@@ -100,13 +117,23 @@ export default function Home() {
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-8 sm:px-20 text-center">
         <h1 className="text-6xl font-bold mt-12">Cookie Parser</h1>
-        <p className="mt-8 max-w-xl">
+        <p className="mt-8 max-w-2xl">
           Just drop in what you got from{" "}
           <code className="bg-blue-50 py-1 px-2 rounded-md">
             document.cookie
           </code>{" "}
-          and we&apos;ll tell you what cookies are present. We never store any
-          of this data (go ahead and check the network tab in the dev tools).
+          and we&apos;ll tell you what cookies are present. Or if you&apos;d
+          prefer, include the cookie string in the URL as a query parameter. (
+          <a
+            className="text-blue-500 underline"
+            href={`https://cookie-parser.michaelbonner.dev/?cookie="bootpack=awesome;you=also awesome"`}
+            rel="noreferrer"
+            target="_blank"
+          >
+            like this
+          </a>
+          ) We never store any of this data (go ahead and check the network tab
+          in the dev tools).
         </p>
         <p className="mt-2 max-w-xl">
           <button className="text-blue-500 underline" onClick={openModal}>
