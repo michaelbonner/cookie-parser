@@ -198,7 +198,12 @@ export default function Home() {
                 className="w-full flex items-center justify-center text-gray-400 font-light italic"
                 style={{ minHeight: "300px" }}
               >
-                Enter your cookie string above
+                <span className="md:hidden">
+                  Enter your cookie string above
+                </span>
+                <span className="sm:hidden md:block">
+                  Enter your cookie string in the box on the left
+                </span>
               </div>
             )}
           </div>
@@ -207,10 +212,9 @@ export default function Home() {
 
       <footer className="flex items-center justify-center w-full h-24 text-gray-700 font-light">
         <a
-          className="flex items-center justify-center space-x-2 w-full"
+          className="flex items-center justify-center space-x-2 w-full pt-10"
           href="https://bootpackdigital.com/"
         >
-          <span>Powered by</span>
           <Image
             src="/bootpack-horizontal.svg"
             alt="Bootpack Digital"
