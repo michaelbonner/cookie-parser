@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -100,6 +101,12 @@ export default function Home() {
           property="og:image"
           content="https://cookie-parser.michaelbonner.dev/og-image.png"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
 
       <Modal
@@ -155,13 +162,16 @@ export default function Home() {
           </button>
         </p>
 
-        <div className="sm:flex sm:items-stretch sm:justify-between w-full border border-gray-200 mt-16 rounded-lg">
+        <div
+          className="sm:flex sm:items-stretch sm:justify-between w-full border border-gray-200 mt-16 rounded-lg"
+          style={{ minHeight: "50vh" }}
+        >
           <div className="bg-gray-50 sm:w-1/3 rounded-t-lg sm:rounded-l-lg">
             <textarea
               className="w-full h-full border-0 bg-gray-50 border-gray-100 py-4 px-8 rounded overflow-scroll border-r"
               name="cookieString"
               onChange={(event) => cookieStringSetter(event)}
-              placeholder="Add the result from document.cookie from any site"
+              placeholder="Add your cookie string here..."
               style={{ minHeight: "300px" }}
               value={cookieString}
             />
@@ -210,7 +220,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 text-gray-700 font-light">
+      <footer className="text-gray-700 font-light text-center max-w-lg mx-auto">
         <a
           className="flex items-center justify-center space-x-2 w-full pt-10"
           href="https://bootpackdigital.com/"
@@ -218,11 +228,24 @@ export default function Home() {
           <Image
             src="/bootpack-horizontal.svg"
             alt="Bootpack Digital"
-            className="h-16 ml-2"
             width="300"
-            height="150"
+            height="90"
           />
         </a>
+        <p className="block mt-4">
+          Come check out our custom web design, web development, software, and
+          mobile apps at{" "}
+          <a
+            className="text-blue-500 underline"
+            href="https://bootpackdigital.com/"
+          >
+            Bootpack Digital
+          </a>
+        </p>
+        <p className="block">
+          <span className="text-sm">&copy;</span>
+          {new Date().getFullYear()} Bootpack Digital
+        </p>
       </footer>
     </div>
   );
