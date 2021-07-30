@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1200 630" style="enable-background:new 0 0 1200 630;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2787B7;}
+	.st1{fill:#E5F4F9;}
+	.st2{font-family:'Inter-Light';}
+	.st3{font-size:180px;}
+</style>
+<rect class="st0" width="1200" height="630"/>
+<g>
+	<path class="st1" d="M457.7,290.4c-4.2-3.1-9.5-4.2-14.6-2.9c-4.9,1.3-8.9,1.8-12.7,1.8c-28.3,0-51.4-23-51.4-50.3
+		c0.1-0.6,0.3-2.3,0.3-2.9c0.2-5.4-2.2-10.6-6.4-14c-4.2-3.4-9.8-4.6-15.1-3.2c-5,1.3-9.1,1.9-13,1.9c-28.3,0-51.4-23-51.4-51.4
+		c0-3.7,0.5-7.6,1.7-12.3c1.3-5.4,0-11.1-3.7-15.3c-3.6-4.2-8.9-6.3-14.6-5.9c-88.1,8.5-154.6,81.7-154.6,170.4
+		c0,94.4,76.8,171.2,171.2,171.2s171.2-76.8,171.2-171.2c0-0.8-0.1-1.7-0.1-2.7C464.3,298.5,461.8,293.6,457.7,290.4z M293.4,443.4
+		c-75.5,0-136.9-61.4-136.9-136.9c0-63.7,42.9-117.5,102.8-132.7c2.2,45.2,39.7,81.3,85.5,81.3c0.6,0,1.1,0,1.7,0
+		c7.9,38.7,41.9,68,82.8,68.5C420.8,391,363.1,443.4,293.4,443.4z"/>
+	<circle class="st1" cx="229.4" cy="260.5" r="24"/>
+	<circle class="st1" cx="213.4" cy="324.4" r="24"/>
+	<circle class="st1" cx="341.3" cy="372.4" r="24"/>
+	<circle class="st1" cx="261.4" cy="388.4" r="24"/>
+</g>
+<text transform="matrix(1 0 0 1 509.7351 317.9697)" class="st1 st2 st3">Cookie</text>
+<text transform="matrix(1 0 0 1 532.8752 475.0967)" class="st1 st2 st3">Parser</text>
+</svg>

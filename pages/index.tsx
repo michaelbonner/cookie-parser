@@ -86,6 +86,20 @@ export default function Home() {
         <title>Cookie Parser</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#005d8f" />
+        <meta
+          property="og:url"
+          content="https://cookie-parser.michaelbonner.dev/"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Parse the cookie string" />
+        <meta
+          property="og:description"
+          content="A little tool to parse a cookie string and figure out what they mean"
+        />
+        <meta
+          property="og:image"
+          content="https://cookie-parser.michaelbonner.dev/og-image.png"
+        />
       </Head>
 
       <Modal
