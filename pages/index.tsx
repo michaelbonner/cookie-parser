@@ -4,17 +4,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-
 Modal.setAppElement("#__next");
 
 export default function Home() {
@@ -114,25 +103,24 @@ export default function Home() {
       </Head>
 
       <Modal
-        className="inset-8 lg:inset-y-12 lg:inset-x-40 fixed bg-white shadow-lg rounded-md py-8 px-12 text-gray-800 overflow-y-scroll"
+        className="inset-8 md:inset-y-24 md:inset-x-40 fixed bg-white shadow rounded-lg py-8 px-12 text-gray-800 overflow-y-scroll border"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
+        overlayClassName="absolute inset-0 bg-blue-400 bg-opacity-70"
       >
-        <h2 className="text-gray-800 text-xl">Watch me do it</h2>
         <button
           className="absolute top-2 right-2 py-2 px-4 text-red-800"
           onClick={closeModal}
         >
           Close
         </button>
-        <div>
-          <video
-            className="w-full h-full overflow-auto"
-            width="320"
-            height="240"
-            controls
-          >
+        <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center h-full overflow-auto">
+          <p>
+            Here&apos;s a video of me getting the contents of `document.cookie`
+            from the developer tools console.
+          </p>
+          <video className="mt-8" width="1280" height="800" controls>
             <source src="/screen-recording.mp4" type="video/mp4" />
             <source src="/screen-recording.ogv" type="video/ogg" />
             Your browser does not support the video tag.
@@ -140,7 +128,7 @@ export default function Home() {
         </div>
       </Modal>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-8 sm:px-20 text-center">
+      <main className="flex flex-col items-center justify-center w-full flex-1 px-8 md:px-20 text-center">
         <h1 className="text-6xl font-bold mt-12">Cookie Parser</h1>
         <p className="mt-8 max-w-2xl">
           Just drop in what you got from{" "}
@@ -167,10 +155,10 @@ export default function Home() {
         </p>
 
         <div
-          className="sm:flex sm:items-stretch sm:justify-between w-full border border-gray-200 mt-16 rounded-lg"
+          className="md:flex md:items-stretch md:justify-between w-full border border-gray-200 mt-16 rounded-lg"
           style={{ minHeight: "50vh" }}
         >
-          <div className="bg-gray-50 sm:w-1/3 rounded-t-lg sm:rounded-l-lg">
+          <div className="bg-gray-50 md:w-1/3 rounded-t-lg md:rounded-l-lg">
             <textarea
               className="w-full h-full border-0 bg-gray-50 border-gray-100 py-4 px-8 rounded overflow-scroll border-r"
               name="cookieString"
@@ -181,7 +169,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-full sm:w-2/3 my-8 py-4 px-8 col-span-2">
+          <div className="w-full md:w-2/3 my-8 py-4 px-8 col-span-2">
             {cookieArray.length ? (
               <div>
                 {cookieArray.map((cookie, index) => {
@@ -213,10 +201,10 @@ export default function Home() {
                 style={{ minHeight: "300px" }}
               >
                 <span className="md:hidden">
-                  Enter your cookie string above
+                  &uarr; Enter your cookie string above
                 </span>
-                <span className="sm:hidden md:block">
-                  Enter your cookie string in the box on the left
+                <span className="hidden md:block">
+                  &larr; Enter your cookie string in the box on the left
                 </span>
               </div>
             )}
@@ -246,7 +234,7 @@ export default function Home() {
             Bootpack Digital
           </a>
         </p>
-        <p className="block">
+        <p className="block mt-2">
           <span className="text-sm">&copy;</span>
           {new Date().getFullYear()} Bootpack Digital
         </p>
