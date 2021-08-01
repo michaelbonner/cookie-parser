@@ -77,6 +77,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#005d8f" />
         <meta
+          name="description"
+          content="A little tool to parse a cookie string and figure out what they mean"
+        />
+        <meta
           property="og:url"
           content="https://cookie-parser.michaelbonner.dev/"
         />
@@ -138,7 +142,7 @@ export default function Home() {
           and we&apos;ll tell you what cookies are present. Or if you&apos;d
           prefer, include the cookie string in the URL as a query parameter. (
           <a
-            className="text-blue-500 underline"
+            className="text-blue-600 underline"
             href={`https://cookie-parser.michaelbonner.dev/?cookie="bootpack=awesome; you=also awesome"`}
             rel="noreferrer"
             target="_blank"
@@ -149,7 +153,7 @@ export default function Home() {
           in the dev tools).
         </p>
         <p className="mt-2 max-w-xl">
-          <button className="text-blue-500 underline" onClick={openModal}>
+          <button className="text-blue-600 underline" onClick={openModal}>
             Need help?
           </button>
         </p>
@@ -180,7 +184,7 @@ export default function Home() {
                     >
                       <dt className="text-right font-light break-all">
                         <a
-                          className="underline text-blue-500"
+                          className="underline text-blue-600"
                           href={`https://cookiedatabase.org/?s=${cookie.name}`}
                           rel="noreferrer"
                           target="_blank"
@@ -228,7 +232,7 @@ export default function Home() {
           Come check out our custom web design, web development, software, and
           mobile apps at{" "}
           <a
-            className="text-blue-500 underline"
+            className="text-blue-600 underline"
             href="https://bootpackdigital.com/"
           >
             Bootpack Digital
