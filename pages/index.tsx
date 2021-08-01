@@ -80,6 +80,7 @@ export default function Home() {
           name="description"
           content="A little tool to parse a cookie string and figure out what they mean"
         />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta
           property="og:url"
           content="https://cookie-parser.michaelbonner.dev/"
