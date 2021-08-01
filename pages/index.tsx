@@ -107,7 +107,7 @@ export default function Home() {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
-        overlayClassName="absolute inset-0 bg-blue-400 bg-opacity-70"
+        overlayClassName="fixed inset-0 bg-blue-400 bg-opacity-70"
       >
         <button
           className="absolute top-2 right-2 py-2 px-4 text-red-800"
