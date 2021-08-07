@@ -125,7 +125,13 @@ export default function Home() {
             Here&apos;s a video of me getting the contents of `document.cookie`
             from the developer tools console.
           </p>
-          <video className="mt-8" width="1280" height="800" controls>
+          <video
+            className="mt-8"
+            width="1280"
+            height="800"
+            controls
+            poster="/screen-recording.jpg"
+          >
             <source src="/screen-recording.mp4" type="video/mp4" />
             <source src="/screen-recording.ogv" type="video/ogg" />
             Your browser does not support the video tag.
