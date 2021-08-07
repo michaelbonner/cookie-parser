@@ -141,7 +141,7 @@ export default function Home() {
             document.cookie
           </code>{" "}
           and we&apos;ll tell you what cookies are present. Or if you&apos;d
-          prefer, include the cookie string in the URL as a query parameter. (
+          prefer, include the cookie string in the URL as a query parameter (
           <a
             className="text-blue-600 underline"
             href={`https://cookie-parser.michaelbonner.dev/?cookie="bootpack=awesome; you=also awesome"`}
@@ -150,7 +150,7 @@ export default function Home() {
           >
             like this
           </a>
-          ) We never store any of this data (go ahead and check the network tab
+          ). We never store any of this data (go ahead and check the network tab
           in the dev tools).
         </p>
         <p className="mt-2 max-w-xl">
