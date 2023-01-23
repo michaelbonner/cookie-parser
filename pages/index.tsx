@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
+import { getCookie } from "../functions/getCookie";
+import { setCookie } from "../functions/setCookie";
 
 Modal.setAppElement("#__next");
 
@@ -18,6 +20,11 @@ export default function Home() {
   function closeModal() {
     setIsOpen(false);
   }
+
+  useEffect(() => {
+    // set an example cookie
+    setCookie("bootpack", "awesome", 30);
+  }, []);
 
   useEffect(() => {
     if (cookieString === "") {
@@ -221,6 +228,16 @@ export default function Home() {
             )}
           </div>
         </div>
+
+        <p className="mt-8 max-w-2xl text-sm">
+          Tip: Navigate to a website to test and run{" "}
+          <code className="bg-blue-50 py-1 px-1 rounded-md">
+            window.copy(document.cookie)
+          </code>
+          . This will copy the cookie string to your clipboard. Note: This will
+          only copy cookies available to javascript (HTTP only and secure
+          cookies will be omitted).
+        </p>
       </main>
 
       <footer className="text-gray-700 font-light text-center max-w-lg mx-auto">
