@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className={inter.className}>
+    <div id="modal-root" className={inter.className}>
       <Component {...pageProps} />
     </div>
   );

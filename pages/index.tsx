@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { setCookie } from "../functions/setCookie";
 
-Modal.setAppElement("#__next");
+Modal.setAppElement("#modal-root");
 
 export default function Home() {
   const [cookieString, setCookieString] = useState("");
