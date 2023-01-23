@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Modal from "react-modal";
-import { getCookie } from "../functions/getCookie";
 import { setCookie } from "../functions/setCookie";
 
 Modal.setAppElement("#__next");
