@@ -80,6 +80,7 @@ export default function Home() {
       <Head>
         <title>Cookie Parser</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://cookie-parser.michaelbonner.dev/" />
         <meta name="theme-color" content="#005d8f" />
         <meta
           name="description"
