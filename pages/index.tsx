@@ -116,22 +116,19 @@ export default function Home() {
         >
           Close
         </button>
-        <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center h-full overflow-auto">
+        <div className="w-full max-w-5xl mx-auto flex flex-col gap-4 items-center justify-center h-full overflow-auto">
           <p>
             Here&apos;s a video of me getting the contents of `document.cookie`
             from the developer tools console.
           </p>
-          <video
-            className="mt-8"
-            width="1280"
-            height="800"
-            controls
-            poster="/screen-recording.jpg"
-          >
-            <source src="/screen-recording.mp4" type="video/mp4" />
-            <source src="/screen-recording.ogv" type="video/ogg" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            className="bg-gray-200 aspect-[16/9] w-full"
+            src="https://www.youtube.com/embed/AJIEl0Sqs3c?si=ENHOaj1SyA1HZQIZ"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
         </div>
       </Modal>
 
