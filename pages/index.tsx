@@ -229,7 +229,7 @@ export default function Home() {
       <footer className="text-gray-700 font-light text-center max-w-lg mx-auto">
         <a
           className="flex items-center justify-center space-x-2 w-full pt-10"
-          href="https://bootpackdigital.com/"
+          href="https://bootpackdigital.com/?utm_source=cookie-parser"
         >
           <Image
             src="/bootpack-horizontal.svg"
@@ -239,18 +239,24 @@ export default function Home() {
           />
         </a>
         <p className="block mt-4">
-          Come check out our custom web design, web development, software, and
-          mobile apps at{" "}
+          Check out our custom web design, web development, software, and mobile
+          apps at{" "}
           <a
             className="text-blue-600 underline"
-            href="https://bootpackdigital.com/"
+            href="https://bootpackdigital.com/?utm_source=cookie-parser"
           >
             Bootpack Digital
           </a>
         </p>
         <p className="block mt-2">
           <span className="text-sm">&copy;</span>
-          {new Date().getFullYear()} Bootpack Digital
+          {new Date().getFullYear()}{" "}
+          <a
+            className="hover:underline underline-offset-2"
+            href="https://bootpackdigital.com/?utm_source=cookie-parser"
+          >
+            Bootpack Digital
+          </a>
         </p>
       </footer>
     </div>
