@@ -78,7 +78,9 @@ export default function Home() {
   return (
     <div className="min-h-screen py-2">
       <Head>
-        <title>Cookie Parser</title>
+        <title>
+          Cookie Parser is an easy way to understand your browser cookies
+        </title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://cookie-parser.michaelbonner.dev/" />
         <meta name="theme-color" content="#005d8f" />
@@ -92,7 +94,10 @@ export default function Home() {
           content="https://cookie-parser.michaelbonner.dev/"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Parse the cookie string" />
+        <meta
+          property="og:title"
+          content="Cookie Parser is an easy way to understand your browser cookies"
+        />
         <meta
           property="og:description"
           content="A little tool to parse a cookie string and figure out what they mean"
