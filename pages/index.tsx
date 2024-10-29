@@ -76,7 +76,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen py-2">
+    <div className="py-2 min-h-screen">
       <Head>
         <title>
           Cookie Parser is an easy way to understand your browser cookies
@@ -109,7 +109,7 @@ export default function Home() {
       </Head>
 
       <Modal
-        className="inset-8 md:inset-y-24 md:inset-x-40 fixed bg-white shadow rounded-lg py-8 px-12 text-gray-800 overflow-y-scroll border"
+        className="overflow-y-scroll fixed inset-8 py-8 px-12 text-gray-800 bg-white rounded-lg border shadow md:inset-y-24 md:inset-x-40"
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
@@ -121,13 +121,13 @@ export default function Home() {
         >
           Close
         </button>
-        <div className="w-full max-w-5xl mx-auto flex flex-col gap-4 items-center justify-center h-full overflow-auto">
+        <div className="flex overflow-auto flex-col gap-4 justify-center items-center mx-auto w-full max-w-5xl h-full">
           <p>
             Here&apos;s a video of me getting the contents of `document.cookie`
             from the developer tools console.
           </p>
           <iframe
-            className="bg-gray-200 aspect-[16/9] w-full"
+            className="w-full bg-gray-200 aspect-[16/9]"
             src="https://www.youtube.com/embed/AJIEl0Sqs3c?si=ENHOaj1SyA1HZQIZ"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -137,11 +137,11 @@ export default function Home() {
         </div>
       </Modal>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-8 md:px-20 text-center">
-        <h1 className="text-6xl font-bold mt-12">Cookie Parser</h1>
+      <main className="flex flex-col flex-1 justify-center items-center px-8 w-full text-center md:px-20">
+        <h1 className="mt-12 text-6xl font-bold">Cookie Parser</h1>
         <p className="mt-8 max-w-2xl">
           Just drop in what you got from{" "}
-          <code className="bg-blue-50 py-1 px-2 rounded-md">
+          <code className="py-1 px-2 bg-blue-50 rounded-md">
             document.cookie
           </code>{" "}
           and we&apos;ll tell you what cookies are present. Or if you&apos;d
@@ -164,12 +164,12 @@ export default function Home() {
         </p>
 
         <div
-          className="md:flex md:items-stretch md:justify-between w-full border border-gray-200 mt-16 rounded-lg"
+          className="mt-16 w-full rounded-lg border border-gray-200 md:flex md:justify-between md:items-stretch"
           style={{ minHeight: "50vh" }}
         >
-          <div className="bg-gray-50 md:w-1/3 rounded-t-lg md:rounded-l-lg">
+          <div className="bg-gray-50 rounded-t-lg md:w-1/3 md:rounded-l-lg">
             <textarea
-              className="w-full h-full border-0 bg-gray-50 border-gray-100 py-4 px-8 rounded overflow-scroll border-r"
+              className="overflow-scroll py-4 px-8 w-full h-full bg-gray-50 rounded border-0 border-r border-gray-100"
               name="cookieString"
               onChange={(event) => cookieStringSetter(event)}
               placeholder="Add your cookie string here..."
@@ -178,18 +178,18 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-full md:w-2/3 my-8 py-4 px-8 col-span-2">
+          <div className="col-span-2 py-4 px-8 my-8 w-full md:w-2/3">
             {cookieArray.length ? (
               <div>
                 {cookieArray.map((cookie, index) => {
                   return (
                     <div
-                      className="py-2 grid grid-cols-2 gap-x-4 text-lg"
+                      className="grid grid-cols-2 gap-x-4 py-2 text-lg"
                       key={index}
                     >
-                      <dt className="text-right font-light break-all">
+                      <dt className="font-light text-right break-all">
                         <a
-                          className="underline text-blue-600"
+                          className="text-blue-600 underline"
                           href={`https://cookiedatabase.org/?s=${cookie.name}`}
                           rel="noreferrer"
                           target="_blank"
@@ -197,7 +197,7 @@ export default function Home() {
                           {cookie.name}
                         </a>
                       </dt>
-                      <dd className="text-left font-medium break-all">
+                      <dd className="font-medium text-left break-all">
                         {cookie.value}
                       </dd>
                     </div>
@@ -206,7 +206,7 @@ export default function Home() {
               </div>
             ) : (
               <div
-                className="w-full flex items-center justify-center text-gray-400 font-light italic"
+                className="flex justify-center items-center w-full italic font-light text-gray-400"
                 style={{ minHeight: "300px" }}
               >
                 <span className="md:hidden">
@@ -222,7 +222,7 @@ export default function Home() {
 
         <p className="mt-8 max-w-2xl text-sm">
           Tip: Navigate to a website to test and run{" "}
-          <code className="bg-blue-50 py-1 px-1 rounded-md">
+          <code className="py-1 px-1 bg-blue-50 rounded-md">
             window.copy(document.cookie)
           </code>
           . This will copy the cookie string to your clipboard. Note: This will
@@ -231,9 +231,9 @@ export default function Home() {
         </p>
       </main>
 
-      <footer className="text-gray-700 font-light text-center max-w-lg mx-auto">
+      <footer className="mx-auto max-w-lg font-light text-center text-gray-700">
         <a
-          className="flex items-center justify-center space-x-2 w-full pt-10"
+          className="flex justify-center items-center pt-10 space-x-2 w-full"
           href="https://bootpackdigital.com/?utm_source=cookie-parser"
         >
           <Image
