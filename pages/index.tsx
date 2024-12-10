@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Modal from "react-modal";
+import {
+  Description,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
 import { setCookie } from "../functions/setCookie";
-
-Modal.setAppElement("#modal-root");
 
 export default function Home() {
   const [cookieString, setCookieString] = useState("");
@@ -108,34 +111,38 @@ export default function Home() {
         />
       </Head>
 
-      <Modal
-        className="overflow-y-scroll fixed inset-8 py-8 px-12 text-gray-800 bg-white rounded-lg border shadow md:inset-y-24 md:inset-x-40"
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-        overlayClassName="fixed inset-0 bg-blue-400 bg-opacity-70"
+      <Dialog
+        open={modalIsOpen}
+        onClose={() => setIsOpen(false)}
+        className="relative z-50"
       >
-        <button
-          className="absolute top-2 right-2 py-2 px-4 text-red-800"
-          onClick={closeModal}
-        >
-          Close
-        </button>
-        <div className="flex overflow-auto flex-col gap-4 justify-center items-center mx-auto w-full max-w-5xl h-full">
-          <p>
-            Here&apos;s a video of me getting the contents of `document.cookie`
-            from the developer tools console.
-          </p>
-          <iframe
-            className="w-full bg-gray-200 aspect-[16/9]"
-            src="https://www.youtube.com/embed/AJIEl0Sqs3c?si=ENHOaj1SyA1HZQIZ"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+          <DialogPanel className="max-w-3xl space-y-4 border bg-white p-12 rounded-lg relative">
+            <DialogTitle className="font-bold">How to get cookies</DialogTitle>
+            <Description>
+              Here&apos;s a video of me getting the contents of
+              `document.cookie` from the developer tools console.
+            </Description>
+            <button
+              className="absolute top-0 right-2 py-2 px-4 text-red-800"
+              onClick={closeModal}
+              aria-label="Close"
+            >
+              X
+            </button>
+            <div className="flex overflow-auto flex-col gap-4 justify-center items-center mx-auto w-full max-w-5xl h-full">
+              <iframe
+                className="w-full bg-gray-200 aspect-[16/9]"
+                src="https://www.youtube.com/embed/AJIEl0Sqs3c?si=ENHOaj1SyA1HZQIZ"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </DialogPanel>
         </div>
-      </Modal>
+      </Dialog>
 
       <main className="flex flex-col flex-1 justify-center items-center px-8 w-full text-center md:px-20">
         <h1 className="mt-12 text-6xl font-bold">Cookie Parser</h1>
