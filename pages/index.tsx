@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   Description,
   Dialog,
+  DialogBackdrop,
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
@@ -116,6 +117,7 @@ export default function Home() {
         onClose={() => setIsOpen(false)}
         className="relative z-50"
       >
+        <DialogBackdrop className="fixed inset-0 bg-black/30" />
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
           <DialogPanel className="max-w-3xl space-y-4 border bg-white p-12 rounded-lg relative">
             <DialogTitle className="font-bold">How to get cookies</DialogTitle>
