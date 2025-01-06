@@ -264,7 +264,7 @@ export default function Home() {
         </p>
         <p className="block mt-2">
           <span className="text-sm">&copy;</span>
-          {new Date().getFullYear()}{" "}
+          2021-{new Date().getFullYear()}{" "}
           <a
             className="hover:underline underline-offset-2"
             href="https://bootpackdigital.com/?utm_source=cookie-parser"
