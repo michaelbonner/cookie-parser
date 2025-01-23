@@ -134,7 +134,7 @@ export default function Home() {
             </button>
             <div className="flex overflow-auto flex-col gap-4 justify-center items-center mx-auto w-full max-w-5xl h-full">
               <iframe
-                className="w-full bg-gray-200 aspect-[16/9]"
+                className="w-full bg-gray-200 aspect-16/9"
                 src="https://www.youtube.com/embed/AJIEl0Sqs3c?si=ENHOaj1SyA1HZQIZ"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -178,7 +178,7 @@ export default function Home() {
         >
           <div className="bg-gray-50 rounded-t-lg md:w-1/3 md:rounded-l-lg">
             <textarea
-              className="overflow-scroll py-4 px-8 w-full h-full bg-gray-50 rounded border-0 border-r border-gray-100"
+              className="overflow-scroll py-4 px-8 w-full h-full bg-gray-50 rounded-sm border-0 border-r border-gray-100"
               name="cookieString"
               onChange={(event) => cookieStringSetter(event)}
               placeholder="Add your cookie string here..."
