@@ -7,7 +7,8 @@
     "build": "next build",
     "lint": "next lint",
     "start": "next start",
-    "out": "pnpm outdated"
+    "out": "bun outdated",
+    "up": "bun update"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
