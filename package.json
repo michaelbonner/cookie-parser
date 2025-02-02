@@ -12,21 +12,21 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
-    "@next/third-parties": "^15.0.4",
-    "@tailwindcss/forms": "^0.5.9",
-    "next": "^15.0.4",
+    "@next/third-parties": "^15.1.6",
+    "@tailwindcss/forms": "^0.5.10",
+    "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.0",
-    "@types/node": "^22.10.1",
-    "@types/react": "^19.0.1",
+    "@tailwindcss/postcss": "^4.0.3",
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.8",
     "@types/react-modal": "^3.16.3",
-    "eslint-config-next": "^15.0.4",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^4.0.0",
-    "typescript": "^5.7.2"
+    "eslint-config-next": "^15.1.6",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3",
+    "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }
