@@ -19,13 +19,13 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.17",
-    "@types/node": "^22.13.14",
-    "@types/react": "^19.0.12",
+    "@tailwindcss/postcss": "^4.1.1",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
     "@types/react-modal": "^3.16.3",
     "eslint-config-next": "^15.2.4",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.17",
+    "tailwindcss": "^4.1.1",
     "typescript": "^5.8.2"
   },
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
