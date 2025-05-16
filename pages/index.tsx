@@ -150,13 +150,13 @@ export default function Home() {
         <h1 className="mt-12 text-6xl font-bold">Cookie Parser</h1>
         <p className="mt-8 max-w-2xl">
           Just drop in what you got from{" "}
-          <code className="py-1 px-2 bg-blue-50 rounded-md">
+          <code className="py-1 px-2 bg-sky-50 rounded-md">
             document.cookie
           </code>{" "}
           and we&apos;ll tell you what cookies are present. Or if you&apos;d
           prefer, include the cookie string in the URL as a query parameter (
           <a
-            className="text-blue-600 underline"
+            className="text-sky-600 underline"
             href={`https://cookie-parser.michaelbonner.dev/?cookie="bootpack=awesome; you=also awesome"`}
             rel="noreferrer"
             target="_blank"
@@ -167,7 +167,7 @@ export default function Home() {
           in the dev tools).
         </p>
         <p className="mt-2 max-w-xl">
-          <button className="text-blue-600 underline" onClick={openModal}>
+          <button className="text-sky-600 underline" onClick={openModal}>
             Need help?
           </button>
         </p>
@@ -198,7 +198,7 @@ export default function Home() {
                     >
                       <dt className="font-light text-right break-all">
                         <a
-                          className="text-blue-600 underline"
+                          className="text-sky-600 underline"
                           href={`https://cookiedatabase.org/?s=${cookie.name}`}
                           rel="noreferrer"
                           target="_blank"
@@ -231,7 +231,7 @@ export default function Home() {
 
         <p className="mt-8 max-w-2xl text-sm">
           Tip: Navigate to a website to test and run{" "}
-          <code className="py-1 px-1 bg-blue-50 rounded-md">
+          <code className="py-1 px-1 bg-sky-50 rounded-md">
             window.copy(document.cookie)
           </code>
           . This will copy the cookie string to your clipboard. Note: This will
@@ -253,13 +253,12 @@ export default function Home() {
           />
         </a>
         <p className="block mt-4">
-          Check out our custom web design, web development, software, and mobile
-          apps at{" "}
           <a
-            className="text-blue-600 underline"
+            className="text-sky-600 underline"
             href="https://bootpackdigital.com/?utm_source=cookie-parser"
           >
-            Bootpack Digital
+            Check out our custom web design, web development, software, and
+            mobile apps at Bootpack Digital
           </a>
         </p>
         <p className="block mt-2">
