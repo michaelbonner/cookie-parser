@@ -12,20 +12,20 @@
     "preinstall": "npx only-allow bun"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.9",
-    "@next/third-parties": "^16.2.2",
+    "@headlessui/react": "^2.2.10",
+    "@next/third-parties": "^16.2.3",
     "@tailwindcss/forms": "^0.5.11",
-    "next": "^16.2.2",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "next": "^16.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.2",
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-modal": "^3.16.3",
-    "eslint-config-next": "^16.2.2",
-    "postcss": "^8.5.8",
+    "eslint-config-next": "^16.2.3",
+    "postcss": "^8.5.9",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2"
   }
