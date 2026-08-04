@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "next lint",
+    "lint": "eslint .",
     "start": "next start",
     "out": "bun outdated",
     "up": "bun update",
@@ -24,9 +24,10 @@
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
     "@types/react-modal": "^3.16.3",
+    "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.0",
     "postcss": "^8.5.25",
     "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.3"
   }
 }

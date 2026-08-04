@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import {
   Description,
   Dialog,
@@ -11,9 +12,25 @@ import {
 import { setCookie } from "../functions/setCookie";
 
 export default function Home() {
-  const [cookieString, setCookieString] = useState("");
-  const [cookieArray, setCookieArray] = useState([]);
+  const router = useRouter();
+  const [editedCookieString, setEditedCookieString] = useState(null);
   const [modalIsOpen, setIsOpen] = useState(false);
+
+  const queryCookie = Array.isArray(router.query.cookie)
+    ? router.query.cookie[0]
+    : router.query.cookie;
+  const cookieString =
+    editedCookieString ?? (queryCookie ? stripQuotes(queryCookie) : "");
+  const cookieArray = cookieString
+    ? cookieString.split("; ").map((current) => {
+        const [name, value] = current.split("=");
+
+        return {
+          name,
+          value: decodeURIComponent(value),
+        };
+      })
+    : [];
 
   function openModal() {
     setIsOpen(true);
@@ -28,55 +45,8 @@ export default function Home() {
     setCookie("bootpack", "awesome", 30);
   }, []);
 
-  useEffect(() => {
-    if (cookieString === "") {
-      setCookieArray([]);
-      return;
-    }
-
-    setCookieArray(
-      cookieString.split("; ").reduce((accumulator, current) => {
-        let [name, value] = current.split("=");
-        return [
-          ...accumulator,
-          {
-            name,
-            value: decodeURIComponent(value),
-          },
-        ];
-      }, [])
-    );
-  }, [cookieString]);
-
-  useEffect(() => {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const params = Object.fromEntries(urlSearchParams.entries());
-
-    if (params.cookie) {
-      if (
-        params.cookie.substring(0, 1) === '"' &&
-        params.cookie.substring(-1, 1) === '"'
-      ) {
-        setCookieString(params.cookie.substring(1, params.cookie.length - 1));
-        return;
-      }
-
-      setCookieString(params.cookie);
-    }
-  }, []);
-
   const cookieStringSetter = (event) => {
-    if (
-      event.target.value.substring(0, 1) === '"' &&
-      event.target.value.substring(-1, 1) === '"'
-    ) {
-      setCookieString(
-        event.target.value.substring(1, event.target.value.length - 1)
-      );
-      return;
-    }
-
-    setCookieString(event.target.value);
+    setEditedCookieString(stripQuotes(event.target.value));
   };
 
   return (
@@ -274,4 +244,12 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+function stripQuotes(value) {
+  if (value.startsWith('"') && value.endsWith('"')) {
+    return value.slice(1, -1);
+  }
+
+  return value;
 }
